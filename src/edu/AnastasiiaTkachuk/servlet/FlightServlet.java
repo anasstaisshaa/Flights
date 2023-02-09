@@ -19,7 +19,7 @@ public class FlightServlet extends HttpServlet {
         resp.setContentType("text/html");
         resp.setCharacterEncoding(StandardCharsets.UTF_8.name());
 
-        try (PrintWriter printWriter = resp.getWriter()) {
+        PrintWriter printWriter = resp.getWriter() ;
             printWriter.write("<h1>List of flights:</h1>");
             printWriter.write("<ul>");
             flightService.findAll().forEach(flightDto -> {
@@ -30,6 +30,5 @@ public class FlightServlet extends HttpServlet {
                         """.formatted(flightDto.getId(), flightDto.getDescription()));
             });
             printWriter.write("</ul>");
-        }
     }
 }
