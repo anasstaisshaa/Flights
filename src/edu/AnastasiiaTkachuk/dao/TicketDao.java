@@ -2,6 +2,7 @@ package edu.AnastasiiaTkachuk.dao;
 
 import edu.AnastasiiaTkachuk.entity.Ticket;
 import edu.AnastasiiaTkachuk.util.ConnectionManager;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@NoArgsConstructor
 public class TicketDao implements Dao<Long, Ticket> {
     private static final TicketDao INSTANCE = new TicketDao();
     private static final String FIND_ALL_BY_ID = """
@@ -19,9 +21,6 @@ public class TicketDao implements Dao<Long, Ticket> {
                     FROM ticket
                     WHERE flight_id = ?
                 """;
-
-    private TicketDao() {
-    }
     public static TicketDao getInstance(){
         return INSTANCE;
     }

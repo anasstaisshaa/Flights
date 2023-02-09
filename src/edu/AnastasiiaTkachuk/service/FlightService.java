@@ -2,17 +2,16 @@ package edu.AnastasiiaTkachuk.service;
 
 import edu.AnastasiiaTkachuk.dao.FlightDao;
 import edu.AnastasiiaTkachuk.dto.FlightDto;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
 
+@NoArgsConstructor
 public class FlightService {
     private static final FlightService INSTANCE = new FlightService();
-
-    private FlightService() {
-    }
 
     private final FlightDao flightDao = FlightDao.getInstance();
 

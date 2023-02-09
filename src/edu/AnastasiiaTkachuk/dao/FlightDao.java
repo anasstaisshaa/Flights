@@ -3,17 +3,16 @@ package edu.AnastasiiaTkachuk.dao;
 import edu.AnastasiiaTkachuk.entity.Flight;
 import edu.AnastasiiaTkachuk.entity.FlightStatus;
 import edu.AnastasiiaTkachuk.util.ConnectionManager;
+import lombok.NoArgsConstructor;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@NoArgsConstructor
 public class FlightDao implements Dao<Long, Flight>{
     private static final FlightDao INSTANCE = new FlightDao();
-
-    private FlightDao() {
-    }
 
     private static final String FIND_ALL = """
             SELECT *
