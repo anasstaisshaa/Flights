@@ -1,9 +1,15 @@
 package edu.AnastasiiaTkachuk.util;
 
+import lombok.Getter;
+import lombok.SneakyThrows;
+import lombok.experimental.UtilityClass;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
+@UtilityClass
 public class ConnectionManager {
     private static final String URL_KEY = "db.url";
     private static final String USER_KEY = "db.user";
@@ -19,18 +25,11 @@ public class ConnectionManager {
             throw new RuntimeException(e);
         }
     }
-
-    private ConnectionManager(){
-    }
+    @SneakyThrows
     public static Connection get(){
-        try {
             return DriverManager.getConnection(
                     PropertiesUtil.get(URL_KEY),
                     PropertiesUtil.get(USER_KEY),
-                    PropertiesUtil.get(PASSWORD_KEY)
-            );
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+                    PropertiesUtil.get(PASSWORD_KEY));
     }
 }
