@@ -3,13 +3,9 @@ package edu.AnastasiiaTkachuk.dto;
 import lombok.Builder;
 import lombok.Value;
 
-import java.util.Objects;
-
 @Value
 @Builder
-public class TicketDto {
+public class UserDto {
     Long id;
-    Long flightId;
-    String seatNo;
-
+    String mail;
 }
