@@ -5,6 +5,7 @@ import edu.AnastasiiaTkachuk.entity.Gender;
 import edu.AnastasiiaTkachuk.entity.Role;
 import edu.AnastasiiaTkachuk.exception.ValidationException;
 import edu.AnastasiiaTkachuk.service.UserService;
+import edu.AnastasiiaTkachuk.util.UrlPath;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 @MultipartConfig(fileSizeThreshold = 1024*1024)
-@WebServlet("/registration")
+@WebServlet(UrlPath.REGISTRATION)
 public class RegistrationServlet extends HttpServlet {
 
     private final UserService userService = UserService.getInstance();
