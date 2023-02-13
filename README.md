@@ -15,7 +15,7 @@
     - Birthday
     - Image
     - Email
-    - Paasword
+    - Password
     - Role
     - Gender
     After you fill in all the fields you need to click on the "Send" button. 
@@ -24,7 +24,6 @@
 ### 2. /login 
 
 
-    On this page, you need to enter the email and password that you used during registration.
     On this page, you need to enter the email and password that you used during registration. 
     After that click the "Login" button
 
