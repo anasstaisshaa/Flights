@@ -1,52 +1,81 @@
-## Flights
+# Flights
 
-    This is a web application with which you can see all possible flights, 
-    information about them, and most importantly, the occupied places. 
-    But only registered users can do this.
+This project is a Java-based application designed to manage and process flight data. It allows users to search, sort, and filter flight information efficiently.
 
-## App navigation
+## Features
 
-### 1. /registration
+- **Search flights** by departure and arrival cities
+- **Sort flights** by various parameters (e.g., price, duration, departure time)
+- **Filter flights** by airlines, price range, and duration
+- **Real-time updates** of flight information
+
+## Technologies Used
+
+- **Java 17**
+- **Maven** - project management
+- **Spring Boot** - backend development
+- **Hibernate** - ORM and database interaction
+- **MySQL** - as the database
+- **Thymeleaf** - front-end templating
+- **Bootstrap** - UI styling
+
+## Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/anasstaisshaa/Flights.git
+    ```
+
+
+ 2. Navigate to the project directory:
+
+    ```bash
+    cd Flights
+    ```
+
+ 3. Build the project using Maven:
+    ```bash
+    mvn clean install
+    ```
     
+4. Set up the database:
+   
+- Create a MySQL database named `flights_db`
+  Update the database connection details in the application.properties file
+
+6. Run the application:
+   
+    ```bash
+    mvn spring-boot:run
+    ```
     
-    This is the first page you need to visit to continue using the application.
-    There you will need to fill in the following fields:
-    - Name
-    - Birthday
-    - Image
-    - Email
-    - Password
-    - Role
-    - Gender
-    After you fill in all the fields you need to click on the "Send" button. 
-    After that, you will be on the /login page
+8. Access the application:
+   
+- Open your browser and go to `http://localhost:8080`
 
-### 2. /login 
+## How to Use
 
+- **Search Flights:** Enter departure and arrival cities to find available flights.
+- **Sort Flights:** Use the sorting options to organize flights by price, duration, or time.
+- **Filter Flights:** Select filters like airlines, price range, and flight duration to narrow down the search results.
+  
+## Future Enhancements
 
-    On this page, you need to enter the email and password that you used during registration. 
-    After that click the "Login" button
+- User authentication and profiles
+- Flight booking functionality
+- Third-party flight data API integration
+- International flights support with multiple currencies
+- Contributing
+- Contributions are welcome! If you’d like to contribute, please submit a pull request. Make sure your changes are properly documented and tested.
 
-### 3. /flights
+## Contributing
 
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and create a pull request.
 
-    If you entered your details correctly on the "Login" page, then you will be here. 
-    You will not be able to access this page without registering. 
-    On this page you can see the display of all possible flights, as well as their status. 
-    Clicking on the flight you need will take you to the "/tickets" page.
+## License
 
-### 4. /tickets
-
-
-    After you click on the flight you have chosen, you will be taken to the pages 
-    where you will see all the purchased seats for this flight.
-
-### 5. /logout
-
-    
-    By going to this page, your session will automatically end. 
-    To use the functionality again, you should go to the "/login" page. 
-    You can also end the session by clicking on the "Logout" button in the upper right corner.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
     
